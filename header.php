@@ -1,4 +1,5 @@
-<?php global $appolo_options; ?><!DOCTYPE html>
+<?php global $appolo_options; ?>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -65,9 +66,14 @@
 					<?php 
 					if (is_home()) :
 						$page_for_posts = get_option( 'page_for_posts' );
-					$title = get_the_title($page_for_posts);
+						$title = get_the_title($page_for_posts);
+					elseif (is_category()) :
+						$title = single_cat_title("", false);
 					elseif (is_404()) :
 						$title = '404 Page';
+					elseif (is_shop()) :
+						$shop_page_id = wc_get_page_id( 'shop' );
+						$title = get_the_title($shop_page_id);
 					else :
 						$title = get_the_title();
 					endif; 

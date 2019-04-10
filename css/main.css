@@ -1,5 +1,6 @@
 a {-webkit-transition: all .3s ease-out; -moz-transition: all .3s ease-out; -o-transition: all .3s ease-out; transition: all .3s ease-out; text-decoration: none; }
 a:visited, a:hover, a:active, a:focus {text-decoration: none; }
+.hidden-link {position: absolute;top: 0;left: 0;width: 100%;height: 100%;opacity: 0;filter: alpha(opacity=0);}
 .screen-reader-text {display: none;}
 .se-pre-con {position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; z-index: 99999; }
 .se-pre-con > * {position: fixed; top: 50%; left: 0; right: 0; margin: 0 auto; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%); }
@@ -11,8 +12,10 @@ a:visited, a:hover, a:active, a:focus {text-decoration: none; }
 .pagination .page-numbers.dots {border-color: transparent;}
 
 .navbar .navbar-nav .menu-item {position: relative;}
-.navbar .navbar-nav .menu-item a {display: inline-block;padding: .5rem;}
-.navbar .navbar-nav .menu-item.menu-item-has-children .drop_down_icon {float: right;cursor: pointer;}
+.navbar .navbar-nav .menu-item a {display: inline-block;padding: .5rem}
+.navbar .navbar-nav.navbar-light .menu-item a, .navbar .navbar-nav.navbar-light .menu-item.menu-item-has-children .drop_down_icon {color: #000000}
+.navbar .navbar-nav.navbar-dark .menu-item a, .navbar .navbar-nav.navbar-dark .menu-item.menu-item-has-children .drop_down_icon {color: #ffffff}
+.navbar .navbar-nav .menu-item.menu-item-has-children .drop_down_icon {float: right;cursor: pointer;margin-top: 12px}
 .sub-menu {top: 100%; left: 0; z-index: 1000; display: none; float: left; min-width: 10rem; padding:0; margin: .125rem 0 0; font-size: 1rem; color: #212529; text-align: left; list-style: none; background-color: #fff; background-clip: padding-box; border: 1px solid rgba(0,0,0,.15); border-radius: .25rem; } 
 
 #main-header, header, section, footer, #footer {position: relative;}
@@ -21,7 +24,8 @@ a:visited, a:hover, a:active, a:focus {text-decoration: none; }
 #blogs .card {margin-bottom: 30px;}
 .widget ul {list-style: none;padding-left: 0;}
 .widget ul li {}
-.widget ul li a {}
+.widget ul li a {color: #999999}
+.widget ul li a:hover {color: #ffffff}
 .widget ul li ul {}
 #wp-calendar {width: 100%}
 #wp-calendar thead tr th {border: 1px solid #000000; text-align: center;}
@@ -32,6 +36,18 @@ a:visited, a:hover, a:active, a:focus {text-decoration: none; }
 .btn-search {border: 1px solid #ced4da; border-left-style: none; }
 #top-header .content-area > *, #footer p:last-child {margin-bottom: 0;}
 #section-widgets .widget-title {font-size: 16px; font-weight: 500; margin-bottom: 20px; color: #fff; }
+
+#section-banner .banner-content {position: absolute; top: 50%; left: 0; width: 100%; -ms-transform: translateY(-50%); -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+#section-banner .banner-text {color: #ffffff; text-align: right;text-shadow: 0px 0px 2px #000000;}
+#section-banner .owl-theme .owl-nav {margin-top: 0;}
+#section-banner .owl-theme .owl-nav [class*=owl-] {position: absolute; top: 50%; background-color: transparent; border-radius: 15px; border: 1px solid #ffffff; width: 31px; color: #ffffff; }
+#section-banner .owl-theme .owl-nav .owl-prev {left: 0;}
+#section-banner .owl-theme .owl-nav .owl-next {right: 0;}
+#section-banner .owl-theme .owl-dots {position: absolute;bottom: 50px;width: 100%;}
+#section-promotions .promotion-wrapper {padding: 5.2vw 2.6vw;}
+#section-services .image-two {display: none;}
+#section-services .sevice-unit:hover .image-two {display: block;}
+#section-services .sevice-unit:hover .image-one {display: none;}
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {}
 
@@ -58,6 +74,7 @@ a:visited, a:hover, a:active, a:focus {text-decoration: none; }
 	.sub-menu {position: absolute;}
 	.navbar-nav.ml-auto .sub-menu {left: auto;right: 0;}
 	.navbar-nav .menu-item-has-children:hover > .sub-menu {display: block} 
+	#section-banner .banner-text {width: 50%;margin-left: auto;}
 }
 
 /* Large devices (desktops, 992px and up) */
