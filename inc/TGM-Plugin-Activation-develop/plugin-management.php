@@ -80,27 +80,7 @@ function appolo_plugins_management() {
 			'required'     => true, // If false, the plugin is only 'recommended' instead of required.
 			'external_url' => 'https://github.com/thomasgriffin/New-Media-Image-Uploader', // If set, overrides default API URL and points to an external URL.
 		),*/
-		array(
-			'name'				=> 'Formidable Forms', 
-			'slug'				=> 'formidable', 
-			'source'			=> get_template_directory_uri() . '/plugins/formidable.zip', 
-			'required'			=> true,
-			'force_activation'	=> false, 
-		),
-		array(
-			'name'				=> 'Formidable Math Captcha', 
-			'slug'				=> 'formidable-math-captcha', 
-			'source'			=> get_template_directory_uri() . '/plugins/formidable-math-captcha.zip', 
-			'required'			=> true,
-			'force_activation'	=> false, 
-		),
-		array(
-			'name'				=> 'Captcha by BestWebSoft', 
-			'slug'				=> 'captcha', 
-			'source'			=> get_template_directory_uri() . '/plugins/captcha.zip', 
-			'required'			=> true,
-			'force_activation'	=> false, 
-		),
+
 		array(
 			'name'				=> 'Mos Image Alter tag management', 
 			'slug'				=> 'mos-image-alt', 
@@ -121,23 +101,15 @@ function appolo_plugins_management() {
 			'force_activation'	=> false, 
 		),
 		array(
+			'name'				=> 'Mos Testimonial', 
+			'slug'				=> 'mos-testimonial', 
+			'required'			=> false,
+			'force_activation'	=> false, 
+		),
+		array(
 			'name'				=> 'Mos CSV Import/Export', 
 			'slug'				=> 'mos-csv-import-export', 
 			'source'			=> 'https://github.com/mostak-shahid/mos-csv-import-export/archive/master.zip', 
-			'required'			=> false,
-			'force_activation'	=> false, 
-		),
-		array(
-			'name'				=> 'Accelerated Mobile Pages', 
-			'slug'				=> 'accelerated-mobile-pages', 
-			'source'			=> get_template_directory_uri() . '/plugins/accelerated-mobile-pages.zip', 
-			'required'			=> false,
-			'force_activation'	=> false, 
-		),
-		array(
-			'name'				=> 'dumketo Amp theme', 
-			'slug'				=> 'dumketo-amp', 
-			'source'			=> get_template_directory_uri() . '/plugins/dumketo-amp.zip', 
 			'required'			=> false,
 			'force_activation'	=> false, 
 		),
@@ -156,6 +128,12 @@ function appolo_plugins_management() {
 		array(
 			'name'				=> 'FakerPress', 
 			'slug'				=> 'fakerpress',  
+			'required'			=> false,
+			'force_activation'	=> false, 
+		),
+		array(
+			'name'				=> 'WooCommerce', 
+			'slug'				=> 'woocommerce',  
 			'required'			=> false,
 			'force_activation'	=> false, 
 		),

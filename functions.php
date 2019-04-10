@@ -1,5 +1,11 @@
 <?php
 show_admin_bar( false );
+require_once('functions/theme-init/plugin-update-checker.php');
+$themeInit = Puc_v4_Factory::buildUpdateChecker(
+	'https://raw.githubusercontent.com/mostak-shahid/update/master/appolo.json',
+	__FILE__,
+	'appolo'
+);
 require_once('functions/theme-functions.php');
 require_once('functions/scripts.php');
 require_once('functions/setup.php');
@@ -16,6 +22,7 @@ require_once('inc/theme-options/loader.php');
 require_once('inc/metabox/init.php'); 
 require_once('inc/metabox/custom-cmb2-fields.php'); 
 require_once('functions/metaboxes.php'); 
+require_once('inc/TGM-Plugin-Activation-develop/plugin-management.php');
 
 require_once('functions/aq_resizer.php');
 require_once('functions/Mobile_Detect.php');
